@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Ajouter un joueur</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <input matInput placeholder="pseudo" [(ngModel)]="pseudo">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()" color="warn">Close</button>
+  <button mat-raised-button color="primary" cdkFocusInitial (click)="createPlayer()">Create player</button>
+</div>

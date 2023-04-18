@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Modifier {{playerWithRank?.pseudo}}</h1>
+<div mat-dialog-content>
+  <p>Nombre de points: {{playerWithRank?.points}}</p>
+  <p>Place dans le tournois: {{playerWithRank?.rank}}</p>
+  <mat-form-field appearance="fill">
+    <input matInput placeholder="points" [(ngModel)]="points">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()" color="warn">Close</button>
+  <button mat-raised-button color="primary" cdkFocusInitial (click)="updatePoints()">Update</button>
+</div>
